@@ -17,7 +17,7 @@ for name,s in pages.items():
  check(len(s.select('script[src^="script.js"]'))==1,f'{name}: shared script once')
  check(not s.select('script[src*="googletagmanager.com"]'),f'{name}: no duplicate tag load')
  check(not s.select('link[href*="fonts.googleapis.com"]'),f'{name}: no external fonts')
- check(s.select_one('.mobile-actions a[href="tel:+919762772430"]'),f'{name}: mobile call')
+ check(s.select_one('.mobile-actions a[href="tel:+919927005959"]'),f'{name}: mobile call')
  for js in s.select('script[type="application/ld+json"]'):json.loads(js.string)
  for tag in s.select('[href], [src]'):
   href=tag.get('href',tag.get('src',''));u=urlparse(href)

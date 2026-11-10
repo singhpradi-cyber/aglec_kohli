@@ -10,8 +10,9 @@ This folder is intentionally flat: upload every file directly to the root of you
 5. Select `main` and `/ (root)`.
 6. Save.
 
-Primary Book Appointment actions call **+91 9762772430**.
-Alternate phone / WhatsApp: **+91 9927005959**.
+Primary Book Appointment actions call **+91 9927005959**, matching the primary number supplied for the Google Business Profile.
+WhatsApp: **+91 9927005959**.
+Alternate phone: **+91 9762772430**.
 
 Doctor display name: **Dr. Krishna Kohli**.
 UPMCI Registration No.: **131386**.
