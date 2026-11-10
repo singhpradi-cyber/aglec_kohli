@@ -19,12 +19,12 @@ UPMCI Registration No.: **131386**.
 ## Consultation routes
 
 - Homepage: general gastroenterology and the existing `#services`, `#liver`, `#endoscopy`, `#doctor` and `#contact` ad destinations.
-- `digestive-care-agra.html`: acidity, IBS and IBD consultation information.
+- `digestive-care-agra.html`: stomach, gut, intestinal, pancreas, gallbladder and appendix consultation information, including IBS and IBD.
 - `liver-specialist-agra.html`: liver report review and FibroScan enquiries. Procedure availability must be confirmed by reception.
-- `endoscopy-agra.html`: endoscopy/colonoscopy consultation and preparation enquiries.
+- `endoscopy-agra.html`: endoscopy, colonoscopy, sigmoidoscopy, balloon-assisted enteroscopy and ERCP information and preparation enquiries.
 - `contact.html`: appointment request, consultation hours and directions.
 
-Hours retained from the existing clinic website: Monday–Saturday, 1:00–6:30 PM IST. These are consultation hours, not ad delivery hours.
+Hours confirmed by the clinic owner: Dr. Kohli’s OPD is open Monday–Saturday, 10 AM–8 PM IST; Sunday closed. IPD is available 24 hours every day, including Sunday. Structured data separates OPD and IPD departments so inpatient availability is not confused with the doctor’s consultation hours. These are clinic hours, not ad delivery hours.
 The original AGLEC logo and approved Dr. Kohli portrait are unchanged. The Maps button targets Dr. Kohli's listing (place ID `ChIJNYV8R8t3dDkRwiCrJwYga7k`).
 
 ## Measurement
