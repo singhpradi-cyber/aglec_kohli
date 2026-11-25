@@ -1,0 +1,31 @@
+name: Site validation
+on:
+  push:
+    branches:
+      - main
+      - 'codex/kohli-service-pages-*'
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install HTML validator dependency
+        run: python3 -m pip install beautifulsoup4==4.13.4
+      - name: Check scripts and contact events
+        run: |
+          node --check script.js
+          node --test tests/contact-flow.test.cjs
+      - name: Check pages and ad destinations
+        run: |
+          python3 tests/check_site.py
+          python3 tests/check_landing_pages.py
+      - name: Verify public deployment
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: python3 tests/check_deployment.py

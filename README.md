@@ -21,7 +21,8 @@ UPMCI Registration No.: **131386**.
 
 - Homepage: general gastroenterology and the existing `#services`, `#liver`, `#endoscopy`, `#doctor` and `#contact` ad destinations.
 - `digestive-care-agra.html`: stomach, gut, intestinal, pancreas, gallbladder and appendix consultation information, including IBS and IBD.
-- `liver-specialist-agra.html`: liver report review and FibroScan enquiries. Procedure availability must be confirmed by reception.
+- `liver-specialist-agra.html`: liver consultation, fatty liver, hepatitis and chronic liver report review.
+- `fibroscan-agra.html`: liver stiffness assessment, preparation, scan booking enquiries and report review. Reception confirms the slot and fee.
 - `endoscopy-agra.html`: endoscopy, colonoscopy, sigmoidoscopy, balloon-assisted enteroscopy and ERCP information and preparation enquiries.
 - `contact.html`: appointment request, consultation hours and directions.
 
@@ -42,3 +43,13 @@ Measurement runs only on the two production domain variants. Preview hosts emit 
 ## Validation
 
 Run `node --check script.js`, `node --test tests/contact-flow.test.cjs`, and `python tests/check_site.py` (requires beautifulsoup4). Check mobile layouts and menu behavior in the browser before publishing. After a Pages deployment, compare the public HTML and assets with the committed version; a repository commit alone does not prove the public site updated.
+
+## Service landing pages and Ads (25 November 2026)
+
+Gastroenterology, digestive, IBS and IBD ad groups should use `digestive-care-agra.html`; liver groups use `liver-specialist-agra.html`; endoscopy uses `endoscopy-agra.html`; FibroScan uses `fibroscan-agra.html`. Preserve the existing homepage anchors for older links.
+
+The validation workflow runs contact-flow tests and checks links, schema, service destinations and clinic details. On main it also checks the deployed HTML and assets before paid-traffic URLs are updated. A successful commit is not proof of a successful public deployment.
+
+### Tracking still requiring account setup
+
+Contact-click events are unchanged. There is no booking backend, confirmed-appointment event or call-duration measurement in this static site. Do not label contact clicks as patients or bookings. To measure actual outcomes, configure and verify clinic-specific call reporting/conversion actions and connect a booking or reception outcome process. Keep patient names, telephone numbers and clinical details out of analytics events and URLs. Keep existing conversion goals until a replacement has been verified.
